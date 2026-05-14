@@ -1,0 +1,19 @@
+{
+  "name": "dream-education-nepal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "gsap": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
