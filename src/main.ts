@@ -405,6 +405,18 @@ function render() {
           <span class="section-label">${copy.hopeGroup.kicker}</span>
           <h2>${copy.hopeGroup.title}</h2>
           <p>${copy.hopeGroup.body}</p>
+          <div class="hope-highlights">
+            ${copy.hopeGroup.highlights
+              .map(
+                (highlight) => `
+                  <article>
+                    <strong>${highlight.label}</strong>
+                    <p>${highlight.body}</p>
+                  </article>
+                `,
+              )
+              .join("")}
+          </div>
         </div>
         <div class="hope-panel" data-animate="card">
           <div class="hope-panel-heading">
@@ -418,6 +430,7 @@ function render() {
                   <article class="institution-card">
                     <span>${institution.country}</span>
                     <h3>${institution.name}</h3>
+                    <p>${institution.body}</p>
                   </article>
                 `,
               )

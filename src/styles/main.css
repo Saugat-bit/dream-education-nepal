@@ -1176,6 +1176,55 @@ p {
   line-height: 1.75;
 }
 
+.hope-highlights {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.hope-highlights article {
+  position: relative;
+  padding: 16px 16px 16px 44px;
+  border: 1px solid rgb(226 232 240 / 0.86);
+  border-radius: 18px;
+  background: rgb(255 255 255 / 0.74);
+  box-shadow: 0 16px 38px rgb(16 24 40 / 0.045);
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.hope-highlights article::before {
+  position: absolute;
+  top: 18px;
+  left: 17px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 7px rgb(255 143 0 / 0.12);
+  content: "";
+}
+
+.hope-highlights article:hover {
+  transform: translateX(6px);
+  border-color: rgb(37 87 232 / 0.22);
+  box-shadow: 0 22px 54px rgb(16 24 40 / 0.08);
+}
+
+.hope-highlights strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.hope-highlights p {
+  margin: 6px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.62;
+}
+
 .hope-panel {
   position: relative;
   overflow: hidden;
@@ -1254,6 +1303,13 @@ p {
 .institution-card h3 {
   margin: 0;
   font-size: clamp(1.02rem, 1.5vw, 1.3rem);
+}
+
+.institution-card p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.62;
 }
 
 .manpower-note {

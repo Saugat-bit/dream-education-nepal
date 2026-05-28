@@ -58,8 +58,9 @@ type SiteCopy = {
     kicker: string;
     title: string;
     body: string;
+    highlights: Array<{ label: string; body: string }>;
     institutionsTitle: string;
-    institutions: Array<{ name: string; country: string }>;
+    institutions: Array<{ name: string; country: string; body: string }>;
     manpowerTitle: string;
     manpowerBody: string;
   };
@@ -112,7 +113,7 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       { label: "Home", href: "#home" },
       { label: "About", href: "#about" },
       { label: "Services", href: "#services" },
-      { label: "Hope Group", href: "#hope-group" },
+      { label: "ホープグループ", href: "#hope-group" },
       { label: "Destinations", href: "#journey" },
       { label: "Contact", href: "#contact" },
     ],
@@ -184,16 +185,21 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
     },
     hopeGroup: {
       kicker: "Hope Education Group",
-      title: "A member of Hope Education Group with international academic links.",
-      body: "Dream Education Nepal is connected with Hope Education Group, expanding our ability to support students through language preparation, overseas study pathways, and affiliated institution guidance.",
+      title: "A member of Hope Education Group with language, study, and career pathways.",
+      body: "Dream Education Nepal is a member of Hope Education Group. This connection helps us support students and candidates beyond basic counseling: we focus first on Japanese and English language training, then guide them toward study abroad applications, affiliated institutions, work visa planning, and practical career routes through our education and manpower network.",
+      highlights: [
+        { label: "Language-first preparation", body: "Japanese and English training are positioned as the foundation before students move into admission, interview, visa, or workplace preparation." },
+        { label: "Affiliated institution guidance", body: "Students can learn about overseas institutions connected with Hope Education Group and compare suitable options by country, budget, program, and future goal." },
+        { label: "Study and work pathway support", body: "After language study, our team can support study applications, visa documents, work visa planning, and eligible manpower-related next steps." },
+      ],
       institutionsTitle: "Overseas affiliated institutions mainly include",
       institutions: [
-        { name: "INTI International University", country: "Malaysia" },
-        { name: "Shinawatra University", country: "Thailand" },
-        { name: "Wekerle Business School", country: "Hungary" },
+        { name: "INTI International University", country: "Malaysia", body: "A Malaysian higher education pathway for students exploring internationally oriented programs, English-medium study options, and regional student life." },
+        { name: "Shinawatra University", country: "Thailand", body: "A Thailand-based university option for students who want to explore Asian education routes, international programs, and a multicultural campus experience." },
+        { name: "Wekerle Business School", country: "Hungary", body: "A European business school pathway for students considering business-focused programs, European exposure, and long-term international career planning." },
       ],
       manpowerTitle: "Own manpower company support",
-      manpowerBody: "Alongside education counseling, our group also has its own manpower company, helping us support eligible candidates with work visa planning and employment pathway guidance.",
+      manpowerBody: "Alongside education counseling, our group also has its own manpower company. This means eligible candidates can receive more practical guidance after language study, including work visa planning, documentation awareness, employer-readiness preparation, and realistic employment pathway counseling.",
     },
     japan: {
       kicker: "Global readiness",
@@ -229,7 +235,7 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       { label: "ホーム", href: "#home" },
       { label: "私たちについて", href: "#about" },
       { label: "サポート", href: "#services" },
-      { label: "Hope Group", href: "#hope-group" },
+      { label: "希望集团", href: "#hope-group" },
       { label: "留学先", href: "#journey" },
       { label: "お問い合わせ", href: "#contact" },
     ],
@@ -300,16 +306,21 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
     },
     hopeGroup: {
       kicker: "Hope Education Group",
-      title: "Hope Education Groupのメンバーとして、海外教育機関とのつながりを活かします。",
-      body: "Dream Education NepalはHope Education Groupと連携し、語学準備、海外留学ルート、提携教育機関への案内をより幅広くサポートします。",
+      title: "Hope Education Groupのメンバーとして、語学・留学・キャリアの道を広げます。",
+      body: "Dream Education NepalはHope Education Groupのメンバーです。このつながりにより、単なる留学相談だけでなく、日本語・英語トレーニングを土台に、海外留学申請、提携教育機関の案内、就労ビザ計画、自社人材ネットワークを通じた進路づくりまで幅広く支援できます。",
+      highlights: [
+        { label: "語学を土台にした準備", body: "入学申請、面接、ビザ、就労準備に進む前に、日本語と英語の力をしっかり整えることを重視します。" },
+        { label: "提携教育機関の案内", body: "Hope Education Groupにつながる海外教育機関について、国、費用、プログラム、将来目標に合わせて比較できます。" },
+        { label: "留学・就労ルート支援", body: "語学学習後、留学申請、ビザ書類、就労ビザ計画、対象者向けの人材関連サポートまで相談できます。" },
+      ],
       institutionsTitle: "主な海外提携教育機関",
       institutions: [
-        { name: "INTI International University", country: "マレーシア" },
-        { name: "Shinawatra University", country: "タイ" },
-        { name: "Wekerle Business School", country: "ハンガリー" },
+        { name: "INTI International University", country: "マレーシア", body: "英語で学ぶ選択肢や国際的な学習環境を検討したい学生に向けた、マレーシアの高等教育ルートです。" },
+        { name: "Shinawatra University", country: "タイ", body: "アジア圏での留学、国際プログラム、多文化キャンパスを検討する学生に適したタイの大学ルートです。" },
+        { name: "Wekerle Business School", country: "ハンガリー", body: "ビジネス分野、ヨーロッパでの学習経験、将来の国際的なキャリア形成を考える学生向けの選択肢です。" },
       ],
       manpowerTitle: "自社人材会社によるサポート",
-      manpowerBody: "教育カウンセリングに加えて、グループには自社人材会社もあり、対象となる候補者の就労ビザ計画や雇用ルート相談を支援できます。",
+      manpowerBody: "教育カウンセリングに加えて、グループには自社人材会社もあります。そのため、対象となる候補者には、語学学習後の就労ビザ計画、書類理解、雇用に向けた準備、現実的な就労ルート相談まで支援できます。",
     },
     japan: {
       kicker: "グローバル準備",
@@ -416,16 +427,21 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
     },
     hopeGroup: {
       kicker: "Hope Education Group",
-      title: "作为Hope Education Group成员，连接海外教育资源。",
-      body: "Dream Education Nepal与Hope Education Group相关联，能够在语言准备、海外学习路径和附属院校指导方面提供更广泛支持。",
+      title: "作为Hope Education Group成员，连接语言、留学和职业路径。",
+      body: "Dream Education Nepal是Hope Education Group成员。这种连接让我们不只提供基础留学咨询，而是先帮助学生和候选人完成日语与英语培训，再继续支持海外留学申请、附属院校指导、工作签证规划，以及通过教育和人力资源网络建立实际发展路径。",
+      highlights: [
+        { label: "语言优先准备", body: "在进入录取申请、面试、签证或就业准备之前，我们强调先打好日语和英语基础。" },
+        { label: "附属院校指导", body: "学生可以了解Hope Education Group相关海外院校，并根据国家、预算、专业和未来目标进行比较。" },
+        { label: "留学与工作路径支持", body: "语言学习后，我们可继续支持留学申请、签证文件、工作签证规划和符合条件者的人力资源相关后续步骤。" },
+      ],
       institutionsTitle: "主要海外附属院校包括",
       institutions: [
-        { name: "INTI International University", country: "马来西亚" },
-        { name: "Shinawatra University", country: "泰国" },
-        { name: "Wekerle Business School", country: "匈牙利" },
+        { name: "INTI International University", country: "马来西亚", body: "适合希望了解英语授课选择、国际化课程和区域学生生活的学生作为马来西亚高等教育路径参考。" },
+        { name: "Shinawatra University", country: "泰国", body: "适合想探索亚洲留学路线、国际项目和多元校园体验的学生作为泰国大学选择参考。" },
+        { name: "Wekerle Business School", country: "匈牙利", body: "适合考虑商业类课程、欧洲学习体验和长期国际职业规划的学生作为欧洲商学院路径参考。" },
       ],
       manpowerTitle: "自有人力资源公司支持",
-      manpowerBody: "除教育咨询外，我们的集团也拥有自有人力资源公司，可帮助符合条件的候选人进行工作签证规划和就业路径指导。",
+      manpowerBody: "除教育咨询外，我们的集团也拥有自有人力资源公司。因此，符合条件的候选人在语言学习后，可以获得工作签证规划、文件意识、就业准备和现实就业路径方面的咨询支持。",
     },
     japan: {
       kicker: "全球准备",
