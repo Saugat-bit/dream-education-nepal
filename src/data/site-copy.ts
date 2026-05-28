@@ -64,6 +64,13 @@ type SiteCopy = {
     manpowerTitle: string;
     manpowerBody: string;
   };
+  manpower: {
+    kicker: string;
+    title: string;
+    body: string;
+    points: Array<{ label: string; body: string }>;
+    cta: string;
+  };
   japan: {
     kicker: string;
     title: string;
@@ -201,6 +208,17 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       manpowerTitle: "Own manpower company support",
       manpowerBody: "Alongside education counseling, our group also has its own manpower company. This means eligible candidates can receive more practical guidance after language study, including work visa planning, documentation awareness, employer-readiness preparation, and realistic employment pathway counseling.",
     },
+    manpower: {
+      kicker: "Own manpower company",
+      title: "Education guidance backed by our own manpower company.",
+      body: "Dream Education Nepal is not only an education consultancy. Our group also has its own manpower company, Dream Manpower Nepal, so eligible candidates can receive clearer guidance for work-related pathways after Japanese or English language preparation. This helps students and candidates understand both study routes and career-oriented visa possibilities from one trusted network.",
+      points: [
+        { label: "Work visa awareness", body: "Guidance on basic work visa expectations, eligibility direction, document readiness, and realistic next steps for suitable candidates." },
+        { label: "Employer-readiness preparation", body: "Support with communication, interview confidence, cultural expectations, and practical preparation before candidates move toward employment pathways." },
+        { label: "Study-to-career planning", body: "Counseling that connects language study, overseas education, future work goals, and manpower support in a more complete long-term plan." },
+      ],
+      cta: "Ask about work pathways",
+    },
     japan: {
       kicker: "Global readiness",
       title: "Prepared for language, study, work, and life after arrival.",
@@ -322,6 +340,17 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       manpowerTitle: "自社人材会社によるサポート",
       manpowerBody: "教育カウンセリングに加えて、グループには自社人材会社もあります。そのため、対象となる候補者には、語学学習後の就労ビザ計画、書類理解、雇用に向けた準備、現実的な就労ルート相談まで支援できます。",
     },
+    manpower: {
+      kicker: "自社人材会社",
+      title: "自社人材会社と連携した教育・キャリア支援。",
+      body: "Dream Education Nepalは教育コンサルティングだけではありません。グループには自社人材会社 Dream Manpower Nepal もあり、日本語・英語の語学準備後、対象となる候補者に対して就労に関する進路相談も行えます。学生と候補者は、留学ルートとキャリア志向のビザ可能性を同じ信頼できるネットワークで理解できます。",
+      points: [
+        { label: "就労ビザの理解", body: "対象者に向けて、就労ビザの基本的な考え方、適性、書類準備、現実的な次のステップを案内します。" },
+        { label: "雇用に向けた準備", body: "コミュニケーション、面接への自信、文化理解、就労ルートに進む前の実践的な準備を支援します。" },
+        { label: "学習からキャリアまでの計画", body: "語学学習、海外教育、将来の仕事目標、人材サポートをつなげて長期的な計画を立てます。" },
+      ],
+      cta: "就労ルートを相談する",
+    },
     japan: {
       kicker: "グローバル準備",
       title: "語学、留学、就労、到着後の生活まで見据えた準備。",
@@ -442,6 +471,17 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       ],
       manpowerTitle: "自有人力资源公司支持",
       manpowerBody: "除教育咨询外，我们的集团也拥有自有人力资源公司。因此，符合条件的候选人在语言学习后，可以获得工作签证规划、文件意识、就业准备和现实就业路径方面的咨询支持。",
+    },
+    manpower: {
+      kicker: "自有人力资源公司",
+      title: "由自有人力资源公司支持的教育与职业指导。",
+      body: "Dream Education Nepal不仅是教育咨询机构。我们的集团也拥有自有人力资源公司 Dream Manpower Nepal，因此符合条件的候选人在完成日语或英语准备后，也可以获得与工作路径相关的咨询支持。学生和候选人可以在同一个可信网络中了解留学路线和职业导向签证可能性。",
+      points: [
+        { label: "工作签证认知", body: "为适合的候选人提供工作签证基本要求、资格方向、文件准备和现实后续步骤的指导。" },
+        { label: "就业准备", body: "支持沟通能力、面试信心、文化期望和进入就业路径前的实际准备。" },
+        { label: "学习到职业规划", body: "将语言学习、海外教育、未来工作目标和人力资源支持连接成更完整的长期计划。" },
+      ],
+      cta: "咨询工作路径",
     },
     japan: {
       kicker: "全球准备",

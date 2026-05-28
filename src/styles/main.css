@@ -1334,6 +1334,101 @@ p {
   line-height: 1.65;
 }
 
+.manpower-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.76fr) minmax(340px, 1fr);
+  gap: clamp(24px, 5vw, 70px);
+  align-items: center;
+  background:
+    radial-gradient(circle at 88% 14%, rgb(255 143 0 / 0.16), transparent 28%),
+    radial-gradient(circle at 16% 90%, rgb(37 87 232 / 0.1), transparent 30%),
+    #0f172a;
+  color: #fff;
+}
+
+.manpower-copy {
+  max-width: 650px;
+}
+
+.manpower-copy .section-label {
+  color: #93c5fd;
+}
+
+.manpower-copy h2 {
+  color: #fff;
+}
+
+.manpower-copy p {
+  margin: 18px 0 24px;
+  color: rgb(255 255 255 / 0.72);
+  font-size: clamp(0.98rem, 1.1vw, 1.08rem);
+  line-height: 1.78;
+}
+
+.manpower-copy .primary-action {
+  background: #fff;
+  color: var(--ink);
+}
+
+.manpower-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.manpower-card {
+  position: relative;
+  overflow: hidden;
+  padding: 22px;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 22px;
+  background: rgb(255 255 255 / 0.08);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 0.2);
+  backdrop-filter: blur(16px);
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    background 0.24s ease;
+}
+
+.manpower-card::after {
+  position: absolute;
+  right: -28px;
+  top: -28px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgb(255 143 0 / 0.13);
+  content: "";
+}
+
+.manpower-card:hover {
+  transform: translateY(-5px);
+  border-color: rgb(255 255 255 / 0.26);
+  background: rgb(255 255 255 / 0.12);
+}
+
+.manpower-card span {
+  display: block;
+  margin-bottom: 18px;
+  color: #fbbf24;
+  font-size: 0.78rem;
+  font-weight: 1000;
+}
+
+.manpower-card h3 {
+  position: relative;
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+}
+
+.manpower-card p {
+  position: relative;
+  margin: 0;
+  color: rgb(255 255 255 / 0.7);
+  line-height: 1.65;
+}
+
 .students-heading {
   max-width: 760px;
   margin-bottom: 28px;
@@ -1773,6 +1868,7 @@ p {
   .contact,
   .translation,
   .hope-group,
+  .manpower-section,
   .office {
     grid-template-columns: 1fr;
   }

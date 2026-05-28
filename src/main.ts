@@ -443,6 +443,28 @@ function render() {
         </div>
       </section>
 
+      <section class="section manpower-section" id="manpower">
+        <div class="manpower-copy" data-animate="reveal">
+          <span class="section-label">${copy.manpower.kicker}</span>
+          <h2>${copy.manpower.title}</h2>
+          <p>${copy.manpower.body}</p>
+          <a class="primary-action" href="#contact">${copy.manpower.cta}</a>
+        </div>
+        <div class="manpower-grid">
+          ${copy.manpower.points
+            .map(
+              (point, index) => `
+                <article class="manpower-card" data-animate="card">
+                  <span>${String(index + 1).padStart(2, "0")}</span>
+                  <h3>${point.label}</h3>
+                  <p>${point.body}</p>
+                </article>
+              `,
+            )
+            .join("")}
+        </div>
+      </section>
+
       <section class="section students">
         <div class="students-heading">
           <span class="section-label">${copy.students.kicker}</span>
