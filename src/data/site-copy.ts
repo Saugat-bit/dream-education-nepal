@@ -54,6 +54,15 @@ type SiteCopy = {
     title: string;
     cards: TextBlock[];
   };
+  hopeGroup: {
+    kicker: string;
+    title: string;
+    body: string;
+    institutionsTitle: string;
+    institutions: Array<{ name: string; country: string }>;
+    manpowerTitle: string;
+    manpowerBody: string;
+  };
   japan: {
     kicker: string;
     title: string;
@@ -103,33 +112,34 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       { label: "Home", href: "#home" },
       { label: "About", href: "#about" },
       { label: "Services", href: "#services" },
+      { label: "Hope Group", href: "#hope-group" },
       { label: "Destinations", href: "#journey" },
       { label: "Contact", href: "#contact" },
     ],
     hero: {
-      badge: "Study abroad guidance from Nepal",
-      association: "Associated with Hope Group",
+      badge: "Japanese and English language training",
+      association: "Member of Hope Education Group",
       title: "Your future",
       highlight: "starts beyond borders.",
       description:
-        "Dream Education Nepal helps students choose the right country, course, institution, documents, and preparation plan for confident study abroad applications.",
-      primaryCta: "Explore destinations",
+        "Dream Education Nepal prepares students with Japanese and English language training, then supports study abroad applications, work visa guidance, and career pathways through our wider education and manpower network.",
+      primaryCta: "Explore programs",
       secondaryCta: "Book counseling",
       stats: [
-        { value: "10+", label: "study destinations", icon: "01" },
-        { value: "360", label: "application guidance", icon: "02" },
-        { value: "1:1", label: "one-on-one counseling", icon: "03" },
+        { value: "10+", label: "Japanese language training", icon: "01" },
+        { value: "360", label: "English test preparation", icon: "02" },
+        { value: "1:1", label: "study and work visa support", icon: "03" },
       ],
     },
-    marquee: ["Study abroad", "Course selection", "Admission support", "Visa preparation", "Pre-departure", "Student counseling"],
+    marquee: ["Japanese language", "English training", "Hope Education Group", "Study abroad", "Work visa support", "Own manpower company"],
     advantages: {
       kicker: "Why Dream Education?",
-      title: "Clear guidance for students planning a global education.",
-      body: "We help students and families make practical decisions about destination, budget, course choice, documentation, interviews, and pre-departure readiness.",
+      title: "Language-first guidance for study, work, and global mobility.",
+      body: "We help students and candidates build Japanese and English language confidence first, then guide them through destination, institution, documentation, study visa, and work visa decisions.",
       cards: [
-        { icon: "01", title: "Personal counseling", body: "We understand your academic background, goals, budget, preferred country, and timeline before recommending a pathway." },
-        { icon: "02", title: "Country-specific preparation", body: "Each destination has different requirements, so we prepare documents, language goals, and applications with the right checklist." },
-        { icon: "03", title: "Transparent processing", body: "Students and parents receive clear updates through every stage, from planning and admission to visa preparation." },
+        { icon: "01", title: "Japanese language training", body: "Focused classes help students prepare for Japanese study pathways, interviews, cultural readiness, and daily life communication." },
+        { icon: "02", title: "English language training", body: "We support English preparation for academic applications, interviews, and destination-specific test or communication needs." },
+        { icon: "03", title: "Study and work visa guidance", body: "After language preparation, we support study abroad applications, work visa planning, and documentation with clear communication." },
       ],
     },
     gallery: { campus: "Campus selection", graduation: "Graduation goals" },
@@ -155,12 +165,12 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
     ],
     services: {
       kicker: "Student support",
-      title: "Everything needed for a strong study abroad application.",
+      title: "Language training first, then complete study and visa support.",
       cards: [
-        { icon: "A", title: "Destination and course selection", body: "We help match your goals, academic record, finances, and preferred lifestyle with suitable countries and institutions." },
-        { icon: "B", title: "Language and test preparation", body: "Guidance for Japanese language, IELTS, PTE, interviews, and other destination-specific requirements." },
-        { icon: "C", title: "Application and documentation", body: "Support for academic records, SOP, financial documents, admission forms, translations, and visa file preparation." },
-        { icon: "D", title: "Pre-departure orientation", body: "Practical sessions about travel, accommodation, culture, student life, part-time work rules, and arrival planning." },
+        { icon: "JP", title: "Japanese language training", body: "Structured Japanese preparation for students and candidates aiming for Japan study, interviews, cultural readiness, and daily communication." },
+        { icon: "EN", title: "English language training", body: "English support for study abroad applications, interviews, academic communication, and destination-specific preparation." },
+        { icon: "SV", title: "Study abroad applications", body: "Guidance for institution selection, admission forms, academic documents, SOP, financial documents, translations, and visa file preparation." },
+        { icon: "WV", title: "Work visa and manpower support", body: "We can guide eligible candidates toward work visa preparation and connect manpower-related support through our own manpower company." },
       ],
     },
     students: {
@@ -172,17 +182,30 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
         { title: "Leave with clarity", body: "Pre-departure sessions help students understand travel, culture, housing, and campus life." },
       ],
     },
+    hopeGroup: {
+      kicker: "Hope Education Group",
+      title: "A member of Hope Education Group with international academic links.",
+      body: "Dream Education Nepal is connected with Hope Education Group, expanding our ability to support students through language preparation, overseas study pathways, and affiliated institution guidance.",
+      institutionsTitle: "Overseas affiliated institutions mainly include",
+      institutions: [
+        { name: "INTI International University", country: "Malaysia" },
+        { name: "Shinawatra University", country: "Thailand" },
+        { name: "Wekerle Business School", country: "Hungary" },
+      ],
+      manpowerTitle: "Own manpower company support",
+      manpowerBody: "Alongside education counseling, our group also has its own manpower company, helping us support eligible candidates with work visa planning and employment pathway guidance.",
+    },
     japan: {
       kicker: "Global readiness",
-      title: "Prepared for the country, the classroom, and the life after arrival.",
-      body: "Dream Education helps students understand more than admission requirements. We prepare them for language expectations, cultural adjustment, family concerns, and practical decisions before they leave Nepal.",
-      points: ["Language and interview readiness", "Country-specific planning", "Parent-friendly counseling", "Pre-departure confidence"],
+      title: "Prepared for language, study, work, and life after arrival.",
+      body: "Dream Education helps students and candidates understand more than admission requirements. We prepare them for language expectations, interviews, cultural adjustment, study visas, work visa planning, and practical decisions before they leave Nepal.",
+      points: ["Japanese and English readiness", "Study abroad applications", "Work visa planning", "Manpower network support"],
     },
     office: { kicker: "Our office", title: "Visit or contact Dream Education Nepal.", ...commonOffice, hours: "Sunday - Friday: 9:30 AM - 5:30 PM" },
     contact: {
       kicker: "Contact",
       title: "Plan your study abroad journey with confidence.",
-      body: "Talk with our counseling team about destinations, courses, documentation, language preparation, and application timing.",
+      body: "Talk with our counseling team about Japanese and English classes, affiliated institutions, study abroad applications, documentation, and work visa guidance.",
       cta: "Email Dream Education",
       form: {
         name: "Full name",
@@ -192,7 +215,7 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       },
     },
     footer: {
-      description: "Helping Nepali students prepare for global education through counseling, documentation, test guidance, and pre-departure support.",
+      description: "Helping Nepali students and candidates prepare for Japanese and English language training, study abroad applications, work visa guidance, and global opportunities.",
       copyright: "© 2026 Dream Education Nepal. All rights reserved.",
     },
   },
@@ -206,32 +229,33 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       { label: "ホーム", href: "#home" },
       { label: "私たちについて", href: "#about" },
       { label: "サポート", href: "#services" },
+      { label: "Hope Group", href: "#hope-group" },
       { label: "留学先", href: "#journey" },
       { label: "お問い合わせ", href: "#contact" },
     ],
     hero: {
-      badge: "ネパールから海外留学をサポート",
-      association: "Hope Group と提携",
+      badge: "日本語・英語トレーニング",
+      association: "Hope Education Group メンバー",
       title: "未来は",
       highlight: "国境の先から始まる。",
-      description: "Dream Education Nepalは、学生に合った国、コース、学校、書類準備、出発前の計画まで、海外留学申請を丁寧にサポートします。",
-      primaryCta: "留学先を見る",
+      description: "Dream Education Nepalは、日本語・英語トレーニングを中心に、海外留学申請、就労ビザ相談、教育・人材ネットワークを通じた進路づくりをサポートします。",
+      primaryCta: "プログラムを見る",
       secondaryCta: "相談を予約する",
       stats: [
-        { value: "10+", label: "留学先", icon: "01" },
-        { value: "360", label: "申請サポート", icon: "02" },
-        { value: "1:1", label: "個別相談", icon: "03" },
+        { value: "10+", label: "日本語トレーニング", icon: "01" },
+        { value: "360", label: "英語試験準備", icon: "02" },
+        { value: "1:1", label: "留学・就労ビザサポート", icon: "03" },
       ],
     },
-    marquee: ["海外留学", "コース選び", "入学サポート", "ビザ準備", "出発前準備", "学生相談"],
+    marquee: ["日本語学習", "英語トレーニング", "Hope Education Group", "海外留学", "就労ビザサポート", "自社人材会社"],
     advantages: {
       kicker: "選ばれる理由",
-      title: "世界で学びたい学生のための分かりやすいガイダンス。",
-      body: "留学先、費用、コース、書類、面接、出発前準備まで、学生と家族が現実的に判断できるよう支援します。",
+      title: "語学を土台に、留学・就労・海外での成長を支援します。",
+      body: "日本語と英語の力を育てたうえで、留学先、学校、書類、留学ビザ、就労ビザの準備を分かりやすく支援します。",
       cards: [
-        { icon: "01", title: "個別カウンセリング", body: "学歴、目標、予算、希望国、申請時期を確認し、一人ひとりに合った道を提案します。" },
-        { icon: "02", title: "国別の準備", body: "留学先ごとの条件に合わせて、書類、語学、申請内容を適切なチェックリストで準備します。" },
-        { icon: "03", title: "透明な進行管理", body: "計画、入学申請、ビザ準備まで、学生と保護者に分かりやすく進捗を共有します。" },
+        { icon: "01", title: "日本語トレーニング", body: "日本での学習、面接、文化理解、日常生活に必要な日本語力を段階的に準備します。" },
+        { icon: "02", title: "英語トレーニング", body: "海外留学申請、面接、学術コミュニケーション、国別要件に合わせた英語準備を支援します。" },
+        { icon: "03", title: "留学・就労ビザ相談", body: "語学準備後、留学申請、就労ビザ計画、必要書類を透明な流れでサポートします。" },
       ],
     },
     gallery: { campus: "キャンパス選び", graduation: "卒業の目標" },
@@ -257,12 +281,12 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
     ],
     services: {
       kicker: "学生サポート",
-      title: "海外留学申請に必要な準備をまとめて支援します。",
+      title: "語学トレーニングから留学・ビザ準備まで一貫して支援します。",
       cards: [
-        { icon: "A", title: "留学先・コース選び", body: "目標、学歴、費用、希望する生活環境に合わせて、適切な国と学校を提案します。" },
-        { icon: "B", title: "語学・試験準備", body: "日本語、IELTS、PTE、面接など、国別に必要な準備を案内します。" },
-        { icon: "C", title: "申請・書類準備", body: "学歴資料、志望理由書、資金書類、申請書、翻訳、ビザ準備をサポートします。" },
-        { icon: "D", title: "出発前オリエンテーション", body: "渡航、住居、文化、学生生活、アルバイト規則、到着後の流れを説明します。" },
+        { icon: "JP", title: "日本語トレーニング", body: "日本留学、面接、文化理解、日常会話に向けた体系的な日本語準備を行います。" },
+        { icon: "EN", title: "英語トレーニング", body: "海外留学申請、面接、学術英語、目的地別の準備に必要な英語力を支援します。" },
+        { icon: "SV", title: "海外留学申請", body: "学校選び、入学申請、学歴資料、志望理由書、資金書類、翻訳、ビザ書類をサポートします。" },
+        { icon: "WV", title: "就労ビザ・人材サポート", body: "対象となる候補者には、自社人材会社のネットワークを通じて就労ビザ準備や進路相談も支援します。" },
       ],
     },
     students: {
@@ -274,17 +298,30 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
         { title: "安心して出発する", body: "渡航前に文化、住居、学生生活、到着後の流れを理解します。" },
       ],
     },
+    hopeGroup: {
+      kicker: "Hope Education Group",
+      title: "Hope Education Groupのメンバーとして、海外教育機関とのつながりを活かします。",
+      body: "Dream Education NepalはHope Education Groupと連携し、語学準備、海外留学ルート、提携教育機関への案内をより幅広くサポートします。",
+      institutionsTitle: "主な海外提携教育機関",
+      institutions: [
+        { name: "INTI International University", country: "マレーシア" },
+        { name: "Shinawatra University", country: "タイ" },
+        { name: "Wekerle Business School", country: "ハンガリー" },
+      ],
+      manpowerTitle: "自社人材会社によるサポート",
+      manpowerBody: "教育カウンセリングに加えて、グループには自社人材会社もあり、対象となる候補者の就労ビザ計画や雇用ルート相談を支援できます。",
+    },
     japan: {
       kicker: "グローバル準備",
-      title: "国、教室、到着後の生活まで見据えた準備。",
-      body: "Dream Educationは入学条件だけでなく、語学、文化への適応、家族の不安、出発前の実践的な判断までサポートします。",
-      points: ["語学・面接準備", "国別の計画", "保護者にも分かりやすい相談", "出発前の安心感"],
+      title: "語学、留学、就労、到着後の生活まで見据えた準備。",
+      body: "Dream Educationは入学条件だけでなく、語学、面接、文化適応、留学ビザ、就労ビザ計画、出発前の実践的な判断まで支援します。",
+      points: ["日本語・英語準備", "海外留学申請", "就労ビザ計画", "人材ネットワーク支援"],
     },
     office: { kicker: "オフィス", title: "Dream Education Nepalへご相談ください。", ...commonOffice, hours: "日曜日 - 金曜日: 9:30 AM - 5:30 PM" },
     contact: {
       kicker: "お問い合わせ",
       title: "安心して海外留学の計画を始めましょう。",
-      body: "留学先、コース、書類準備、語学学習、申請時期についてカウンセリングチームにご相談ください。",
+      body: "日本語・英語クラス、提携教育機関、海外留学申請、書類準備、就労ビザ相談についてお気軽にご相談ください。",
       cta: "メールで相談する",
       form: {
         name: "お名前",
@@ -294,7 +331,7 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       },
     },
     footer: {
-      description: "カウンセリング、書類準備、語学・試験案内、出発前サポートを通じて、ネパールの学生の海外留学を支援します。",
+      description: "日本語・英語トレーニング、海外留学申請、就労ビザ相談、グローバルな進路づくりを支援します。",
       copyright: "© 2026 Dream Education Nepal. All rights reserved.",
     },
   },
@@ -308,32 +345,33 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       { label: "首页", href: "#home" },
       { label: "关于我们", href: "#about" },
       { label: "服务", href: "#services" },
+      { label: "Hope Group", href: "#hope-group" },
       { label: "留学目的地", href: "#journey" },
       { label: "联系", href: "#contact" },
     ],
     hero: {
-      badge: "来自尼泊尔的海外留学指导",
-      association: "与 Hope Group 合作",
+      badge: "日语和英语语言培训",
+      association: "Hope Education Group 成员",
       title: "你的未来",
       highlight: "从跨越国界开始。",
-      description: "Dream Education Nepal帮助学生选择合适的国家、课程、院校、申请材料和准备计划，让海外留学申请更清晰、更有信心。",
-      primaryCta: "查看目的地",
+      description: "Dream Education Nepal以日语和英语培训为重点，并继续支持海外留学申请、工作签证指导以及教育和人力资源网络中的发展路径。",
+      primaryCta: "查看项目",
       secondaryCta: "预约咨询",
       stats: [
-        { value: "10+", label: "留学目的地", icon: "01" },
-        { value: "360", label: "申请指导", icon: "02" },
-        { value: "1:1", label: "学生咨询", icon: "03" },
+        { value: "10+", label: "日语培训", icon: "01" },
+        { value: "360", label: "英语考试准备", icon: "02" },
+        { value: "1:1", label: "留学和工作签证支持", icon: "03" },
       ],
     },
-    marquee: ["海外留学", "课程选择", "入学支持", "签证准备", "出发前指导", "学生咨询"],
+    marquee: ["日语学习", "英语培训", "Hope Education Group", "海外留学", "工作签证支持", "自有人力资源公司"],
     advantages: {
       kicker: "为什么选择我们？",
-      title: "为计划全球教育的学生提供清晰指导。",
-      body: "我们帮助学生和家庭在目的地、预算、课程选择、材料、面试和出发前准备方面做出实际决定。",
+      title: "以语言为基础，支持学习、工作和全球发展。",
+      body: "我们先帮助学生和候选人建立日语与英语能力，再指导目的地、院校、材料、留学签证和工作签证准备。",
       cards: [
-        { icon: "01", title: "个性化咨询", body: "我们了解学生的学术背景、目标、预算、目标国家和时间安排，再推荐合适路径。" },
-        { icon: "02", title: "按国家准备", body: "不同国家要求不同，我们根据清单准备材料、语言目标和申请内容。" },
-        { icon: "03", title: "透明流程", body: "从规划、录取申请到签证准备，学生和家长都能清楚了解进度。" },
+        { icon: "01", title: "日语培训", body: "为日本留学、面试、文化适应和日常生活沟通提供阶段性日语准备。" },
+        { icon: "02", title: "英语培训", body: "为海外留学申请、面试、学术沟通和目的地要求提供英语准备支持。" },
+        { icon: "03", title: "留学和工作签证指导", body: "语言准备后，我们以清晰流程支持留学申请、工作签证规划和文件准备。" },
       ],
     },
     gallery: { campus: "校园选择", graduation: "毕业目标" },
@@ -359,12 +397,12 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
     ],
     services: {
       kicker: "学生支持",
-      title: "为强有力的海外留学申请准备一切。",
+      title: "先做语言培训，再完成留学和签证支持。",
       cards: [
-        { icon: "A", title: "目的地与课程选择", body: "根据目标、成绩、资金和生活偏好匹配合适国家与院校。" },
-        { icon: "B", title: "语言与考试准备", body: "提供日语、IELTS、PTE、面试和国家별要求指导。" },
-        { icon: "C", title: "申请与材料", body: "支持成绩材料、SOP、资金文件、申请表、翻译和签证材料准备。" },
-        { icon: "D", title: "出发前指导", body: "说明旅行、住宿、文化、学生生活、兼职规则和抵达计划。" },
+        { icon: "JP", title: "日语培训", body: "为日本留学、面试、文化理解和日常沟通提供系统化日语准备。" },
+        { icon: "EN", title: "英语培训", body: "为海外留学申请、面试、学术交流和目的地要求提供英语支持。" },
+        { icon: "SV", title: "海外留学申请", body: "支持院校选择、录取申请、学术材料、SOP、资金文件、翻译和签证文件准备。" },
+        { icon: "WV", title: "工作签证和人力资源支持", body: "对符合条件的候选人，可通过自有人力资源公司网络提供工作签证准备和就业路径咨询。" },
       ],
     },
     students: {
@@ -376,17 +414,30 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
         { title: "清楚出发", body: "出发前了解旅行、文化、住宿和校园生活。" },
       ],
     },
+    hopeGroup: {
+      kicker: "Hope Education Group",
+      title: "作为Hope Education Group成员，连接海外教育资源。",
+      body: "Dream Education Nepal与Hope Education Group相关联，能够在语言准备、海外学习路径和附属院校指导方面提供更广泛支持。",
+      institutionsTitle: "主要海外附属院校包括",
+      institutions: [
+        { name: "INTI International University", country: "马来西亚" },
+        { name: "Shinawatra University", country: "泰国" },
+        { name: "Wekerle Business School", country: "匈牙利" },
+      ],
+      manpowerTitle: "自有人力资源公司支持",
+      manpowerBody: "除教育咨询外，我们的集团也拥有自有人力资源公司，可帮助符合条件的候选人进行工作签证规划和就业路径指导。",
+    },
     japan: {
       kicker: "全球准备",
-      title: "为目标国家、课堂和抵达后的生活做好准备。",
-      body: "Dream Education不仅帮助学生了解入学要求，也帮助他们准备语言、文化适应、家庭顾虑和出发前的实际决定。",
-      points: ["语言与面试准备", "按国家规划", "家长也容易理解的咨询", "出发前更有信心"],
+      title: "为语言、学习、工作和抵达后的生活做好准备。",
+      body: "Dream Education不仅帮助学生了解入学要求，也帮助他们准备语言、面试、文化适应、留学签证、工作签证规划和出发前的实际决定。",
+      points: ["日语和英语准备", "海外留学申请", "工作签证规划", "人力资源网络支持"],
     },
     office: { kicker: "办公室", title: "欢迎联系Dream Education Nepal。", ...commonOffice, hours: "星期日 - 星期五: 9:30 AM - 5:30 PM" },
     contact: {
       kicker: "联系",
       title: "自信规划你的海外留学旅程。",
-      body: "与我们的咨询团队讨论目的地、课程、材料、语言准备和申请时间。",
+      body: "与我们的咨询团队讨论日语和英语课程、附属院校、海外留学申请、材料准备和工作签证指导。",
       cta: "邮件咨询",
       form: {
         name: "姓名",
@@ -396,7 +447,7 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
       },
     },
     footer: {
-      description: "通过咨询、材料准备、考试指导和出发前支持，帮助尼泊尔学生迈向全球教育。",
+      description: "通过日语和英语培训、海外留学申请、工作签证指导和全球机会规划，帮助尼泊尔学生与候选人发展。",
       copyright: "© 2026 Dream Education Nepal. All rights reserved.",
     },
   },

@@ -1145,13 +1145,137 @@ p {
 .service-card span {
   display: grid;
   place-items: center;
-  width: 52px;
+  min-width: 52px;
+  padding: 0 8px;
   height: 52px;
   border-radius: 15px;
   background: linear-gradient(135deg, #eff6ff, #fff);
   color: var(--blue);
-  font-size: 1.08rem;
+  font-size: 0.94rem;
   font-weight: 1000;
+}
+
+.hope-group {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(360px, 1fr);
+  gap: clamp(26px, 5vw, 72px);
+  align-items: center;
+  background:
+    radial-gradient(circle at 12% 12%, rgb(255 143 0 / 0.11), transparent 28%),
+    linear-gradient(180deg, #fff, #f8fbff);
+}
+
+.hope-intro {
+  max-width: 610px;
+}
+
+.hope-intro p {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 1.1vw, 1.08rem);
+  line-height: 1.75;
+}
+
+.hope-panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgb(226 232 240 / 0.9);
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 86% 0%, rgb(37 87 232 / 0.14), transparent 30%),
+    linear-gradient(135deg, rgb(255 255 255 / 0.98), rgb(248 251 255 / 0.92));
+  box-shadow: 0 24px 74px rgb(16 24 40 / 0.08);
+}
+
+.hope-panel::before {
+  position: absolute;
+  right: -36px;
+  top: -44px;
+  color: rgb(37 87 232 / 0.055);
+  font-size: clamp(5rem, 10vw, 9rem);
+  font-weight: 1000;
+  content: "HOPE";
+}
+
+.hope-panel-heading {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+  color: var(--ink);
+  font-weight: 950;
+}
+
+.hope-panel-heading span {
+  max-width: 420px;
+}
+
+.hope-panel-heading strong {
+  color: var(--orange);
+  font-size: 1.4rem;
+}
+
+.institution-grid {
+  position: relative;
+  display: grid;
+  gap: 12px;
+}
+
+.institution-card {
+  padding: 18px;
+  border: 1px solid rgb(226 232 240 / 0.86);
+  border-radius: 18px;
+  background: rgb(255 255 255 / 0.78);
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.institution-card:hover {
+  transform: translateX(6px);
+  border-color: rgb(37 87 232 / 0.22);
+  box-shadow: 0 18px 44px rgb(16 24 40 / 0.08);
+}
+
+.institution-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 1000;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.institution-card h3 {
+  margin: 0;
+  font-size: clamp(1.02rem, 1.5vw, 1.3rem);
+}
+
+.manpower-note {
+  position: relative;
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid rgb(255 143 0 / 0.26);
+  border-radius: 20px;
+  background: rgb(255 247 237 / 0.72);
+}
+
+.manpower-note span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--orange);
+  font-weight: 1000;
+}
+
+.manpower-note p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .students-heading {
@@ -1592,6 +1716,7 @@ p {
   .media-story,
   .contact,
   .translation,
+  .hope-group,
   .office {
     grid-template-columns: 1fr;
   }

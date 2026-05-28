@@ -400,6 +400,36 @@ function render() {
         </div>
       </section>
 
+      <section class="section hope-group" id="hope-group">
+        <div class="hope-intro" data-animate="reveal">
+          <span class="section-label">${copy.hopeGroup.kicker}</span>
+          <h2>${copy.hopeGroup.title}</h2>
+          <p>${copy.hopeGroup.body}</p>
+        </div>
+        <div class="hope-panel" data-animate="card">
+          <div class="hope-panel-heading">
+            <span>${copy.hopeGroup.institutionsTitle}</span>
+            <strong>03</strong>
+          </div>
+          <div class="institution-grid">
+            ${copy.hopeGroup.institutions
+              .map(
+                (institution) => `
+                  <article class="institution-card">
+                    <span>${institution.country}</span>
+                    <h3>${institution.name}</h3>
+                  </article>
+                `,
+              )
+              .join("")}
+          </div>
+          <article class="manpower-note">
+            <span>${copy.hopeGroup.manpowerTitle}</span>
+            <p>${copy.hopeGroup.manpowerBody}</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section students">
         <div class="students-heading">
           <span class="section-label">${copy.students.kicker}</span>
