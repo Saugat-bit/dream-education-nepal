@@ -1334,7 +1334,7 @@ p {
   line-height: 1.65;
 }
 
-.manpower-section {
+.section.manpower-section {
   display: grid;
   grid-template-columns: minmax(0, 0.76fr) minmax(340px, 1fr);
   gap: clamp(24px, 5vw, 70px);
