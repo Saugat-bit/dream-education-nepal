@@ -938,7 +938,8 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 44px;
+  margin-bottom: 54px;
 }
 
 .destination-actions span {
