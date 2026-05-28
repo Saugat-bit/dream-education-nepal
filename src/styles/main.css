@@ -775,13 +775,17 @@ p {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  align-items: stretch;
 }
 
 .destination-card {
   position: relative;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
   min-height: 610px;
   padding: 22px;
   overflow: hidden;
+  align-self: stretch;
   transform: translateY(0);
   transition:
     transform 0.28s ease,
@@ -847,6 +851,7 @@ p {
 .destination-card h3 {
   position: relative;
   margin-bottom: 22px;
+  min-height: 2.25em;
   font-size: clamp(1.35rem, 2vw, 1.9rem);
   transition:
     color 0.24s ease,
@@ -862,9 +867,11 @@ p {
   position: relative;
   display: grid;
   gap: 10px;
+  align-content: start;
 }
 
 .destination-details section {
+  min-height: 118px;
   padding: 12px;
   border: 1px solid rgb(232 237 245 / 0.9);
   border-radius: 14px;
@@ -910,7 +917,8 @@ p {
   display: block;
   width: 100%;
   height: 160px;
-  margin-top: 14px;
+  margin-top: 16px;
+  align-self: end;
   border: 1px solid rgb(232 237 245 / 0.9);
   border-radius: 14px;
   filter: saturate(0.86) contrast(0.96);
