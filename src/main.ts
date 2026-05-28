@@ -23,9 +23,10 @@ if (!app) {
 }
 
 const appRoot = app;
-const state: { language: LanguageCode; loaded: boolean } = {
+const state: { language: LanguageCode; loaded: boolean; destinationsExpanded: boolean } = {
   language: "en",
   loaded: false,
+  destinationsExpanded: false,
 };
 
 const languageOrder: LanguageCode[] = ["en", "ja", "zh"];
@@ -81,6 +82,24 @@ const destinationPlannerCopy: Record<
     body: "我们会根据预算、课程、签证时间、语言要求、家庭偏好和未来职业方向筛选目的地。",
     checks: ["预算匹配", "课程适合", "签证准备", "职业路径"],
     cta: "预约目的地咨询",
+  },
+};
+
+const destinationToggleCopy: Record<LanguageCode, { more: string; less: string; summary: (visible: number, total: number) => string }> = {
+  en: {
+    more: "See all destinations",
+    less: "See fewer destinations",
+    summary: (visible, total) => `Showing ${visible} of ${total} study destinations`,
+  },
+  ja: {
+    more: "すべての留学先を見る",
+    less: "表示を少なくする",
+    summary: (visible, total) => `${total}件中${visible}件の留学先を表示中`,
+  },
+  zh: {
+    more: "查看全部目的地",
+    less: "收起目的地",
+    summary: (visible, total) => `正在显示 ${total} 个目的地中的 ${visible} 个`,
   },
 };
 
@@ -169,7 +188,11 @@ function render() {
   const copy = siteCopy[state.language];
   const destinations = destinationContent[state.language];
   const planner = destinationPlannerCopy[state.language];
+  const destinationToggle = destinationToggleCopy[state.language];
   const readinessLabels = readinessOrbitLabels[state.language];
+  const visibleDestinationCount = 6;
+  const visibleCountries = state.destinationsExpanded ? destinations.countries : destinations.countries.slice(0, visibleDestinationCount);
+  const destinationSummaryCount = state.destinationsExpanded ? destinations.countries.length : visibleCountries.length;
   document.documentElement.lang = state.language;
 
   appRoot.innerHTML = `
@@ -310,7 +333,7 @@ function render() {
           <p data-animate="reveal">${destinations.intro}</p>
         </div>
         <div class="destination-grid">
-          ${destinations.countries
+          ${visibleCountries
             .map(
               (country, index) => `
                 <article class="destination-card" data-animate="destination">
@@ -341,15 +364,27 @@ function render() {
               `,
             )
             .join("")}
-          <article class="destination-planner" data-animate="destination">
-            <span>${planner.eyebrow}</span>
-            <h3>${planner.title}</h3>
-            <p>${planner.body}</p>
-            <div class="planner-checks">
-              ${planner.checks.map((check) => `<small>${check}</small>`).join("")}
-            </div>
-            <a class="primary-action" href="#contact">${planner.cta}</a>
-          </article>
+          ${
+            state.destinationsExpanded
+              ? `
+                <article class="destination-planner" data-animate="destination">
+                  <span>${planner.eyebrow}</span>
+                  <h3>${planner.title}</h3>
+                  <p>${planner.body}</p>
+                  <div class="planner-checks">
+                    ${planner.checks.map((check) => `<small>${check}</small>`).join("")}
+                  </div>
+                  <a class="primary-action" href="#contact">${planner.cta}</a>
+                </article>
+              `
+              : ""
+          }
+        </div>
+        <div class="destination-actions" data-animate="reveal">
+          <span>${destinationToggle.summary(destinationSummaryCount, destinations.countries.length)}</span>
+          <button class="destination-toggle" type="button" data-destination-toggle>
+            ${state.destinationsExpanded ? destinationToggle.less : destinationToggle.more}
+          </button>
         </div>
       </section>
 
@@ -577,6 +612,7 @@ function render() {
   `;
 
   bindLanguageToggle();
+  bindDestinationToggle();
   bindContactForm(copy.office.email);
   runAnimations();
 }
@@ -609,6 +645,17 @@ function bindLanguageToggle() {
       },
     });
     });
+  });
+}
+
+function bindDestinationToggle() {
+  const button = document.querySelector<HTMLButtonElement>("[data-destination-toggle]");
+
+  button?.addEventListener("click", () => {
+    state.destinationsExpanded = !state.destinationsExpanded;
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    render();
+    document.querySelector("#journey")?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 }
 
