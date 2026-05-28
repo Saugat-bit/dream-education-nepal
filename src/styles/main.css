@@ -165,6 +165,69 @@ a {
   color: var(--blue);
 }
 
+.mobile-nav {
+  position: relative;
+  display: none;
+}
+
+.mobile-nav summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.76rem;
+  font-weight: 950;
+  list-style: none;
+}
+
+.mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-nav summary::after {
+  margin-left: 8px;
+  color: var(--orange);
+  content: "+";
+  font-weight: 1000;
+}
+
+.mobile-nav[open] summary::after {
+  content: "-";
+}
+
+.mobile-nav nav {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  display: grid;
+  min-width: 220px;
+  padding: 10px;
+  border: 1px solid rgb(232 237 245 / 0.92);
+  border-radius: 18px;
+  background: rgb(255 255 255 / 0.96);
+  box-shadow: 0 24px 70px rgb(16 24 40 / 0.14);
+  backdrop-filter: blur(18px);
+}
+
+.mobile-nav nav a {
+  padding: 11px 12px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.mobile-nav nav a:hover {
+  background: #f7f9fc;
+  color: var(--blue);
+}
+
 .language-option,
 .primary-action,
 .secondary-action {
@@ -1904,11 +1967,16 @@ p {
 
 @media (max-width: 1000px) {
   .site-header {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 10px;
   }
 
   .nav-links {
     display: none;
+  }
+
+  .mobile-nav {
+    display: block;
   }
 
   .hero-video-card {
@@ -1956,6 +2024,7 @@ p {
   .site-header {
     top: 10px;
     width: calc(100% - 20px);
+    padding: 7px;
   }
 
   .brand span {
@@ -1976,6 +2045,17 @@ p {
     min-height: 32px;
     padding: 0 8px;
     font-size: 0.66rem;
+  }
+
+  .mobile-nav summary {
+    min-height: 34px;
+    padding: 0 11px;
+    font-size: 0.68rem;
+  }
+
+  .mobile-nav nav {
+    right: -4px;
+    min-width: min(250px, calc(100vw - 34px));
   }
 
   .split-title {

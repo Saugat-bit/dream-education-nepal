@@ -36,6 +36,12 @@ const languageLabels: Record<LanguageCode, string> = {
   zh: "\u4e2d\u6587",
 };
 
+const mobileMenuLabels: Record<LanguageCode, string> = {
+  en: "Menu",
+  ja: "メニュー",
+  zh: "菜单",
+};
+
 const destinationMapQueries = [
   "Japan universities",
   "India universities",
@@ -218,6 +224,12 @@ function render() {
       <nav class="nav-links" aria-label="Primary navigation">
         ${copy.nav.map((item) => `<a href="${item.href}">${item.label}</a>`).join("")}
       </nav>
+      <details class="mobile-nav">
+        <summary>${mobileMenuLabels[state.language]}</summary>
+        <nav aria-label="Mobile navigation">
+          ${copy.nav.map((item) => `<a href="${item.href}">${item.label}</a>`).join("")}
+        </nav>
+      </details>
       <div class="language-switcher" aria-label="Language switcher">
         ${languageOrder
           .map(
