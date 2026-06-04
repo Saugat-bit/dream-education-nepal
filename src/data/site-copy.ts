@@ -59,6 +59,8 @@ type SiteCopy = {
     title: string;
     body: string;
     highlights: Array<{ label: string; body: string }>;
+    pathwayTitle: string;
+    pathwaySteps: Array<{ label: string; body: string }>;
     institutionsTitle: string;
     institutions: Array<{ name: string; country: string; body: string }>;
     manpowerTitle: string;
@@ -199,6 +201,13 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
         { label: "Affiliated institution guidance", body: "Students can learn about overseas institutions connected with Hope Education Group and compare suitable options by country, budget, program, and future goal." },
         { label: "Study and work pathway support", body: "After language study, our team can support study applications, visa documents, work visa planning, and eligible manpower-related next steps." },
       ],
+      pathwayTitle: "How the Hope pathway supports candidates",
+      pathwaySteps: [
+        { label: "01. Language training", body: "Japanese and English classes prepare students for interviews, admission communication, workplace expectations, and daily life abroad." },
+        { label: "02. Institution matching", body: "Hope Education Group links help us present overseas academic options and explain which pathway fits the student's background and budget." },
+        { label: "03. Visa and documentation", body: "The team supports study applications, visa files, translations, financial documents, and readiness checks with clear step-by-step guidance." },
+        { label: "04. Career direction", body: "For eligible candidates, Dream Manpower Nepal adds work pathway awareness, employer-readiness preparation, and work visa planning support." },
+      ],
       institutionsTitle: "Overseas affiliated institutions mainly include",
       institutions: [
         { name: "INTI International University", country: "Malaysia", body: "A Malaysian higher education pathway for students exploring internationally oriented programs, English-medium study options, and regional student life." },
@@ -331,6 +340,13 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
         { label: "提携教育機関の案内", body: "Hope Education Groupにつながる海外教育機関について、国、費用、プログラム、将来目標に合わせて比較できます。" },
         { label: "留学・就労ルート支援", body: "語学学習後、留学申請、ビザ書類、就労ビザ計画、対象者向けの人材関連サポートまで相談できます。" },
       ],
+      pathwayTitle: "Hopeの進路サポートの流れ",
+      pathwaySteps: [
+        { label: "01. 語学トレーニング", body: "日本語・英語クラスで、面接、入学連絡、職場での期待、海外生活に必要な力を準備します。" },
+        { label: "02. 教育機関マッチング", body: "Hope Education Groupとのつながりを活かし、学生の背景や予算に合う海外教育ルートを説明します。" },
+        { label: "03. ビザ・書類準備", body: "留学申請、ビザ書類、翻訳、資金書類、準備状況の確認を段階的にサポートします。" },
+        { label: "04. キャリア方向づけ", body: "対象となる候補者には、Dream Manpower Nepalを通じて就労ルート理解、雇用準備、就労ビザ計画も支援します。" },
+      ],
       institutionsTitle: "主な海外提携教育機関",
       institutions: [
         { name: "INTI International University", country: "マレーシア", body: "英語で学ぶ選択肢や国際的な学習環境を検討したい学生に向けた、マレーシアの高等教育ルートです。" },
@@ -462,6 +478,13 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
         { label: "语言优先准备", body: "在进入录取申请、面试、签证或就业准备之前，我们强调先打好日语和英语基础。" },
         { label: "附属院校指导", body: "学生可以了解Hope Education Group相关海外院校，并根据国家、预算、专业和未来目标进行比较。" },
         { label: "留学与工作路径支持", body: "语言学习后，我们可继续支持留学申请、签证文件、工作签证规划和符合条件者的人力资源相关后续步骤。" },
+      ],
+      pathwayTitle: "Hope路径如何支持候选人",
+      pathwaySteps: [
+        { label: "01. 语言培训", body: "日语和英语课程帮助学生准备面试、入学沟通、职场期待和海外日常生活。" },
+        { label: "02. 院校匹配", body: "通过Hope Education Group相关资源，说明适合学生背景和预算的海外教育路径。" },
+        { label: "03. 签证与文件", body: "分步骤支持留学申请、签证材料、翻译、资金文件和准备情况检查。" },
+        { label: "04. 职业方向", body: "对符合条件的候选人，Dream Manpower Nepal可补充工作路径认知、就业准备和工作签证规划支持。" },
       ],
       institutionsTitle: "主要海外附属院校包括",
       institutions: [

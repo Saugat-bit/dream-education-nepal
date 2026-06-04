@@ -464,6 +464,21 @@ function render() {
               )
               .join("")}
           </div>
+          <div class="hope-pathway" data-animate="card">
+            <span>${copy.hopeGroup.pathwayTitle}</span>
+            <div>
+              ${copy.hopeGroup.pathwaySteps
+                .map(
+                  (step) => `
+                    <article>
+                      <strong>${step.label}</strong>
+                      <p>${step.body}</p>
+                    </article>
+                  `,
+                )
+                .join("")}
+            </div>
+          </div>
         </div>
         <div class="hope-panel" data-animate="card">
           <div class="hope-panel-heading">
