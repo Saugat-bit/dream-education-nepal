@@ -115,6 +115,120 @@ const readinessOrbitLabels: Record<LanguageCode, string[]> = {
   zh: ["国家", "课程", "文化", "职业"],
 };
 
+const hopeEvidenceCopy: Record<
+  LanguageCode,
+  {
+    metricsTitle: string;
+    metrics: Array<{ value: string; label: string }>;
+    networkTitle: string;
+    networkBody: string;
+    cooperationTitle: string;
+    cooperationItems: string[];
+    schoolsTitle: string;
+    schools: Array<{ name: string; location: string; note: string }>;
+  }
+> = {
+  en: {
+    metricsTitle: "Hope Education Group at a glance",
+    metrics: [
+      { value: "2007", label: "founded" },
+      { value: "29", label: "universities" },
+      { value: "600+", label: "majors" },
+      { value: "17,000+", label: "employees" },
+      { value: "300,000+", label: "students trained" },
+      { value: "01765.HK", label: "Hong Kong stock code" },
+    ],
+    networkTitle: "Education backed by a wider group ecosystem",
+    networkBody:
+      "Hope Education Group belongs to a broader Hope Group ecosystem with education, industry, agriculture, technology, culture, and international business interests. For students, this gives Dream Education Nepal a stronger story than ordinary counseling: language training, institution information, study applications, and career-pathway thinking can be presented together.",
+    cooperationTitle: "Cooperation possibilities highlighted by Hope Group",
+    cooperationItems: [
+      "Academic collaboration and exchange",
+      "Collaborative subject development",
+      "Branch campus cooperation",
+      "University acquisitions and mergers",
+      "Academic credit transfer",
+      "Overseas short-term programs",
+      "International university network building",
+    ],
+    schoolsTitle: "Institution network mentioned in the Hope profile",
+    schools: [
+      { name: "INTI International University", location: "Malaysia", note: "Higher education partner option for English-medium and international programs." },
+      { name: "Shinawatra University", location: "Thailand", note: "International university route with pre-language, undergraduate, postgraduate, and doctoral programs." },
+      { name: "Wekerle Business School", location: "Hungary", note: "European business-school pathway with professional and international study exposure." },
+      { name: "Southwest Jiaotong University Hope College", location: "China", note: "Undergraduate engineering college known for rail transportation and civil engineering majors." },
+      { name: "Guizhou Qiannan Economic College", location: "China", note: "Business and economics-focused college with accounting, finance, management, and technology majors." },
+      { name: "Yinchuan University of Energy", location: "China", note: "Applied undergraduate university with energy economy, business English, and electrical engineering fields." },
+    ],
+  },
+  ja: {
+    metricsTitle: "Hope Education Group の概要",
+    metrics: [
+      { value: "2007", label: "設立" },
+      { value: "29", label: "大学" },
+      { value: "600+", label: "専攻" },
+      { value: "17,000+", label: "職員" },
+      { value: "300,000+", label: "育成人材" },
+      { value: "01765.HK", label: "香港証券コード" },
+    ],
+    networkTitle: "より広いグループ基盤に支えられた教育",
+    networkBody:
+      "Hope Education Group は、教育、産業、農業、技術、文化、国際事業を含む幅広い Hope Group エコシステムとつながっています。Dream Education Nepal は、語学研修、学校情報、留学申請、将来のキャリア設計を一体的に説明できます。",
+    cooperationTitle: "Hope Group が示す協力分野",
+    cooperationItems: [
+      "学術交流と連携",
+      "共同カリキュラム開発",
+      "分校・キャンパス協力",
+      "大学提携・統合支援",
+      "単位互換",
+      "短期海外プログラム",
+      "国際大学ネットワーク構築",
+    ],
+    schoolsTitle: "Hope プロフィールに掲載された教育機関",
+    schools: [
+      { name: "INTI International University", location: "マレーシア", note: "英語開講と国際プログラムを検討する学生向けの高等教育ルート。" },
+      { name: "Shinawatra University", location: "タイ", note: "語学準備から学士・大学院・博士課程までを持つ国際大学ルート。" },
+      { name: "Wekerle Business School", location: "ハンガリー", note: "ビジネス分野と欧州での学習経験を重視する学生向けの選択肢。" },
+      { name: "Southwest Jiaotong University Hope College", location: "中国", note: "鉄道交通・土木工学分野に強い工学系大学。" },
+      { name: "Guizhou Qiannan Economic College", location: "中国", note: "会計、金融、経営、情報技術を含む経済・ビジネス系カレッジ。" },
+      { name: "Yinchuan University of Energy", location: "中国", note: "エネルギー経済、ビジネス英語、電気工学などの応用型大学。" },
+    ],
+  },
+  zh: {
+    metricsTitle: "希望教育集团概览",
+    metrics: [
+      { value: "2007", label: "成立" },
+      { value: "29", label: "大学" },
+      { value: "600+", label: "专业" },
+      { value: "17,000+", label: "员工" },
+      { value: "300,000+", label: "培养学生" },
+      { value: "01765.HK", label: "香港股票代码" },
+    ],
+    networkTitle: "由更广泛集团生态支持的教育服务",
+    networkBody:
+      "希望教育集团连接教育、产业、农业、技术、文化和国际业务等更广泛的集团生态。对 Dream Education Nepal 来说，这意味着我们可以把语言培训、院校信息、留学申请和未来职业路径放在同一个体系中进行说明。",
+    cooperationTitle: "希望集团提到的合作方向",
+    cooperationItems: [
+      "学术合作与交流",
+      "合作课程开发",
+      "分校与校区合作",
+      "大学并购与合作",
+      "学分互认",
+      "海外短期项目",
+      "国际大学网络建设",
+    ],
+    schoolsTitle: "希望资料中提到的教育机构网络",
+    schools: [
+      { name: "INTI International University", location: "马来西亚", note: "适合关注英语授课和国际课程的高等教育路径。" },
+      { name: "Shinawatra University", location: "泰国", note: "提供语言、本科、研究生和博士阶段的国际大学路径。" },
+      { name: "Wekerle Business School", location: "匈牙利", note: "适合关注商业学习和欧洲教育体验的学生。" },
+      { name: "Southwest Jiaotong University Hope College", location: "中国", note: "以轨道交通、土木工程等工程方向为特色的本科院校。" },
+      { name: "Guizhou Qiannan Economic College", location: "中国", note: "覆盖会计、金融、管理、信息技术等经济与商业方向。" },
+      { name: "Yinchuan University of Energy", location: "中国", note: "包含能源经济、商务英语、电气工程等应用型专业方向。" },
+    ],
+  },
+};
+
 const destinationContent: Record<
   LanguageCode,
   {
@@ -196,6 +310,7 @@ function render() {
   const planner = destinationPlannerCopy[state.language];
   const destinationToggle = destinationToggleCopy[state.language];
   const readinessLabels = readinessOrbitLabels[state.language];
+  const hopeEvidence = hopeEvidenceCopy[state.language];
   const visibleDestinationCount = 6;
   const visibleCountries = state.destinationsExpanded ? destinations.countries : destinations.countries.slice(0, visibleDestinationCount);
   const destinationSummaryCount = state.destinationsExpanded ? destinations.countries.length : visibleCountries.length;
@@ -464,6 +579,31 @@ function render() {
               )
               .join("")}
           </div>
+          <div class="hope-proof" data-animate="card">
+            <div class="hope-proof-copy">
+              <span>${hopeEvidence.metricsTitle}</span>
+              <h3>${hopeEvidence.networkTitle}</h3>
+              <p>${hopeEvidence.networkBody}</p>
+            </div>
+            <div class="hope-metrics">
+              ${hopeEvidence.metrics
+                .map(
+                  (metric) => `
+                    <article>
+                      <strong>${metric.value}</strong>
+                      <small>${metric.label}</small>
+                    </article>
+                  `,
+                )
+                .join("")}
+            </div>
+          </div>
+          <div class="hope-cooperation" data-animate="card">
+            <span>${hopeEvidence.cooperationTitle}</span>
+            <div>
+              ${hopeEvidence.cooperationItems.map((item) => `<small>${item}</small>`).join("")}
+            </div>
+          </div>
           <div class="hope-pathway" data-animate="card">
             <span>${copy.hopeGroup.pathwayTitle}</span>
             <div>
@@ -498,6 +638,22 @@ function render() {
               )
               .join("")}
           </div>
+          <div class="hope-school-showcase">
+            <span>${hopeEvidence.schoolsTitle}</span>
+            <div>
+              ${hopeEvidence.schools
+                .map(
+                  (school) => `
+                    <article>
+                      <small>${school.location}</small>
+                      <strong>${school.name}</strong>
+                      <p>${school.note}</p>
+                    </article>
+                  `,
+                )
+                .join("")}
+            </div>
+          </div>
           <article class="manpower-note">
             <span>${copy.hopeGroup.manpowerTitle}</span>
             <p>${copy.hopeGroup.manpowerBody}</p>
@@ -510,7 +666,12 @@ function render() {
           <span class="section-label">${copy.manpower.kicker}</span>
           <h2>${copy.manpower.title}</h2>
           <p>${copy.manpower.body}</p>
-          <a class="primary-action" href="#contact">${copy.manpower.cta}</a>
+          <div class="manpower-actions">
+            <a class="primary-action" href="#contact">${copy.manpower.cta}</a>
+            <a class="secondary-action" href="https://dream-manpower-nepal.vercel.app/" target="_blank" rel="noreferrer">
+              ${copy.manpower.websiteLabel}
+            </a>
+          </div>
         </div>
         <div class="manpower-grid">
           ${copy.manpower.points
@@ -817,6 +978,22 @@ function runAnimations() {
     stagger: 0.08,
     ease: "back.out(1.5)",
   });
+
+  gsap.from(
+    ".hope-highlights article, .hope-metrics article, .hope-cooperation small, .hope-pathway article, .institution-card, .hope-school-showcase article",
+    {
+      autoAlpha: 0,
+      y: 22,
+      scale: 0.96,
+      duration: 0.62,
+      stagger: 0.045,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#hope-group",
+        start: "top 72%",
+      },
+    },
+  );
 
   gsap.to(".readiness-orbit", {
     rotate: 360,

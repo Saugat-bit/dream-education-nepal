@@ -72,6 +72,7 @@ type SiteCopy = {
     body: string;
     points: Array<{ label: string; body: string }>;
     cta: string;
+    websiteLabel: string;
   };
   japan: {
     kicker: string;
@@ -195,9 +196,10 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
     hopeGroup: {
       kicker: "Hope Education Group",
       title: "A member of Hope Education Group with language, study, and career pathways.",
-      body: "Dream Education Nepal is a member of Hope Education Group. This connection helps us support students and candidates beyond basic counseling: we focus first on Japanese and English language training, then guide them toward study abroad applications, affiliated institutions, work visa planning, and practical career routes through our education and manpower network.",
+      body: "Dream Education Nepal works under the wider Hope Education Group network, giving students access to a stronger education ecosystem rather than a single consultancy service. The group connection helps us focus first on Japanese and English language training, then guide students toward overseas study applications, affiliated institutions, documentation, visa preparation, and career-oriented pathways through our education and manpower support network.",
       highlights: [
-        { label: "Language-first preparation", body: "Japanese and English training are positioned as the foundation before students move into admission, interview, visa, or workplace preparation." },
+        { label: "Group-backed counseling", body: "Students receive guidance from an education network that connects language preparation, international institutions, visa planning, and future career thinking." },
+        { label: "Japanese and English focus", body: "The main preparation focus is Japanese and English language training, because language ability supports interviews, admissions, daily life, and work readiness." },
         { label: "Affiliated institution guidance", body: "Students can learn about overseas institutions connected with Hope Education Group and compare suitable options by country, budget, program, and future goal." },
         { label: "Study and work pathway support", body: "After language study, our team can support study applications, visa documents, work visa planning, and eligible manpower-related next steps." },
       ],
@@ -214,19 +216,20 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
         { name: "Shinawatra University", country: "Thailand", body: "A Thailand-based university option for students who want to explore Asian education routes, international programs, and a multicultural campus experience." },
         { name: "Wekerle Business School", country: "Hungary", body: "A European business school pathway for students considering business-focused programs, European exposure, and long-term international career planning." },
       ],
-      manpowerTitle: "Own manpower company support",
-      manpowerBody: "Alongside education counseling, our group also has its own manpower company. This means eligible candidates can receive more practical guidance after language study, including work visa planning, documentation awareness, employer-readiness preparation, and realistic employment pathway counseling.",
+      manpowerTitle: "Own manpower company: Dream Manpower Nepal",
+      manpowerBody: "Alongside education counseling, our group has its own manpower company, Dream Manpower Nepal. This means eligible candidates can receive more practical guidance after language study, including work visa planning, documentation awareness, employer-readiness preparation, and realistic employment pathway counseling.",
     },
     manpower: {
       kicker: "Own manpower company",
-      title: "Education guidance backed by our own manpower company.",
-      body: "Dream Education Nepal is not only an education consultancy. Our group also has its own manpower company, Dream Manpower Nepal, so eligible candidates can receive clearer guidance for work-related pathways after Japanese or English language preparation. This helps students and candidates understand both study routes and career-oriented visa possibilities from one trusted network.",
+      title: "We also have our own manpower company: Dream Manpower Nepal.",
+      body: "This is an important part of the Dream Education Nepal support system. We are not only an education consultancy. Our group also operates Dream Manpower Nepal, our own manpower company, so eligible candidates can receive clearer guidance for work-related pathways after Japanese or English language preparation. Students and candidates can understand study routes, work visa possibilities, documentation expectations, employer-readiness, and career direction through one connected network.",
       points: [
         { label: "Work visa awareness", body: "Guidance on basic work visa expectations, eligibility direction, document readiness, and realistic next steps for suitable candidates." },
         { label: "Employer-readiness preparation", body: "Support with communication, interview confidence, cultural expectations, and practical preparation before candidates move toward employment pathways." },
         { label: "Study-to-career planning", body: "Counseling that connects language study, overseas education, future work goals, and manpower support in a more complete long-term plan." },
       ],
       cta: "Ask about work pathways",
+      websiteLabel: "Visit Dream Manpower Nepal",
     },
     japan: {
       kicker: "Global readiness",
@@ -334,9 +337,10 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
     hopeGroup: {
       kicker: "Hope Education Group",
       title: "Hope Education Groupのメンバーとして、語学・留学・キャリアの道を広げます。",
-      body: "Dream Education NepalはHope Education Groupのメンバーです。このつながりにより、単なる留学相談だけでなく、日本語・英語トレーニングを土台に、海外留学申請、提携教育機関の案内、就労ビザ計画、自社人材ネットワークを通じた進路づくりまで幅広く支援できます。",
+      body: "Dream Education NepalはHope Education Groupの幅広い教育ネットワークのもとで、単なる留学相談にとどまらない支援を行います。日本語・英語トレーニングを土台に、海外留学申請、提携教育機関の案内、書類準備、ビザ準備、さらに自社人材ネットワークを通じたキャリア志向の進路づくりまで幅広く支援できます。",
       highlights: [
-        { label: "語学を土台にした準備", body: "入学申請、面接、ビザ、就労準備に進む前に、日本語と英語の力をしっかり整えることを重視します。" },
+        { label: "グループ連携の相談", body: "語学準備、海外教育機関、ビザ計画、将来のキャリアまでつなげて考えられる教育ネットワークとして支援します。" },
+        { label: "日本語・英語を重視", body: "面接、入学手続き、日常生活、就労準備に必要な基礎として、日本語と英語の力をしっかり整えます。" },
         { label: "提携教育機関の案内", body: "Hope Education Groupにつながる海外教育機関について、国、費用、プログラム、将来目標に合わせて比較できます。" },
         { label: "留学・就労ルート支援", body: "語学学習後、留学申請、ビザ書類、就労ビザ計画、対象者向けの人材関連サポートまで相談できます。" },
       ],
@@ -353,19 +357,20 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
         { name: "Shinawatra University", country: "タイ", body: "アジア圏での留学、国際プログラム、多文化キャンパスを検討する学生に適したタイの大学ルートです。" },
         { name: "Wekerle Business School", country: "ハンガリー", body: "ビジネス分野、ヨーロッパでの学習経験、将来の国際的なキャリア形成を考える学生向けの選択肢です。" },
       ],
-      manpowerTitle: "自社人材会社によるサポート",
-      manpowerBody: "教育カウンセリングに加えて、グループには自社人材会社もあります。そのため、対象となる候補者には、語学学習後の就労ビザ計画、書類理解、雇用に向けた準備、現実的な就労ルート相談まで支援できます。",
+      manpowerTitle: "自社人材会社：Dream Manpower Nepal",
+      manpowerBody: "教育カウンセリングに加えて、グループには自社人材会社 Dream Manpower Nepal もあります。そのため、対象となる候補者には、語学学習後の就労ビザ計画、書類理解、雇用に向けた準備、現実的な就労ルート相談まで支援できます。",
     },
     manpower: {
       kicker: "自社人材会社",
-      title: "自社人材会社と連携した教育・キャリア支援。",
-      body: "Dream Education Nepalは教育コンサルティングだけではありません。グループには自社人材会社 Dream Manpower Nepal もあり、日本語・英語の語学準備後、対象となる候補者に対して就労に関する進路相談も行えます。学生と候補者は、留学ルートとキャリア志向のビザ可能性を同じ信頼できるネットワークで理解できます。",
+      title: "自社人材会社 Dream Manpower Nepal もあります。",
+      body: "これはDream Education Nepalの支援体制において重要なポイントです。私たちは教育コンサルティングだけではありません。グループには自社人材会社 Dream Manpower Nepal もあり、日本語・英語の語学準備後、対象となる候補者に対して就労に関する進路相談も行えます。学生と候補者は、留学ルート、就労ビザの可能性、書類準備、雇用に向けた準備、キャリア方向を同じ信頼できるネットワークで理解できます。",
       points: [
         { label: "就労ビザの理解", body: "対象者に向けて、就労ビザの基本的な考え方、適性、書類準備、現実的な次のステップを案内します。" },
         { label: "雇用に向けた準備", body: "コミュニケーション、面接への自信、文化理解、就労ルートに進む前の実践的な準備を支援します。" },
         { label: "学習からキャリアまでの計画", body: "語学学習、海外教育、将来の仕事目標、人材サポートをつなげて長期的な計画を立てます。" },
       ],
       cta: "就労ルートを相談する",
+      websiteLabel: "Dream Manpower Nepalを見る",
     },
     japan: {
       kicker: "グローバル準備",
@@ -473,9 +478,10 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
     hopeGroup: {
       kicker: "Hope Education Group",
       title: "作为Hope Education Group成员，连接语言、留学和职业路径。",
-      body: "Dream Education Nepal是Hope Education Group成员。这种连接让我们不只提供基础留学咨询，而是先帮助学生和候选人完成日语与英语培训，再继续支持海外留学申请、附属院校指导、工作签证规划，以及通过教育和人力资源网络建立实际发展路径。",
+      body: "Dream Education Nepal依托Hope Education Group更广泛的教育网络，不只是提供单一留学咨询。我们先帮助学生和候选人完成日语与英语培训，再继续支持海外留学申请、附属院校指导、文件准备、签证准备，以及通过教育和人力资源网络建立职业导向的发展路径。",
       highlights: [
-        { label: "语言优先准备", body: "在进入录取申请、面试、签证或就业准备之前，我们强调先打好日语和英语基础。" },
+        { label: "集团支持咨询", body: "通过教育网络，把语言准备、海外院校、签证规划和未来职业方向连接起来提供指导。" },
+        { label: "重视日语与英语", body: "日语和英语能力是面试、入学沟通、日常生活和就业准备的重要基础。" },
         { label: "附属院校指导", body: "学生可以了解Hope Education Group相关海外院校，并根据国家、预算、专业和未来目标进行比较。" },
         { label: "留学与工作路径支持", body: "语言学习后，我们可继续支持留学申请、签证文件、工作签证规划和符合条件者的人力资源相关后续步骤。" },
       ],
@@ -492,19 +498,20 @@ export const siteCopy: Record<LanguageCode, SiteCopy> = {
         { name: "Shinawatra University", country: "泰国", body: "适合想探索亚洲留学路线、国际项目和多元校园体验的学生作为泰国大学选择参考。" },
         { name: "Wekerle Business School", country: "匈牙利", body: "适合考虑商业类课程、欧洲学习体验和长期国际职业规划的学生作为欧洲商学院路径参考。" },
       ],
-      manpowerTitle: "自有人力资源公司支持",
-      manpowerBody: "除教育咨询外，我们的集团也拥有自有人力资源公司。因此，符合条件的候选人在语言学习后，可以获得工作签证规划、文件意识、就业准备和现实就业路径方面的咨询支持。",
+      manpowerTitle: "自有人力资源公司：Dream Manpower Nepal",
+      manpowerBody: "除教育咨询外，我们的集团也拥有自有人力资源公司 Dream Manpower Nepal。因此，符合条件的候选人在语言学习后，可以获得工作签证规划、文件意识、就业准备和现实就业路径方面的咨询支持。",
     },
     manpower: {
       kicker: "自有人力资源公司",
-      title: "由自有人力资源公司支持的教育与职业指导。",
-      body: "Dream Education Nepal不仅是教育咨询机构。我们的集团也拥有自有人力资源公司 Dream Manpower Nepal，因此符合条件的候选人在完成日语或英语准备后，也可以获得与工作路径相关的咨询支持。学生和候选人可以在同一个可信网络中了解留学路线和职业导向签证可能性。",
+      title: "我们也拥有自有人力资源公司 Dream Manpower Nepal。",
+      body: "这是Dream Education Nepal支持体系中的重要部分。我们不仅是教育咨询机构。我们的集团也运营自有人力资源公司 Dream Manpower Nepal，因此符合条件的候选人在完成日语或英语准备后，也可以获得与工作路径相关的咨询支持。学生和候选人可以在同一个可信网络中了解留学路线、工作签证可能性、文件要求、就业准备和职业方向。",
       points: [
         { label: "工作签证认知", body: "为适合的候选人提供工作签证基本要求、资格方向、文件准备和现实后续步骤的指导。" },
         { label: "就业准备", body: "支持沟通能力、面试信心、文化期望和进入就业路径前的实际准备。" },
         { label: "学习到职业规划", body: "将语言学习、海外教育、未来工作目标和人力资源支持连接成更完整的长期计划。" },
       ],
       cta: "咨询工作路径",
+      websiteLabel: "访问 Dream Manpower Nepal",
     },
     japan: {
       kicker: "全球准备",
